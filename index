@@ -1,1 +1,99 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi 💙</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eaf6ff;
+      color: #315477;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      max-width: 450px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 22px;
+      box-shadow: 0 5px 18px #bdd9ef;
+    }
+
+    h1 { color: #579bd4; }
+
+    input, select, textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 18px;
+      border: 1px solid #b5d9f5;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #76b9ed;
+      color: white;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hi 💙</h1>
+    <p>random lang guys HAHAHAH bored ko</p>
+
+    <form id="survey">
+      <label>Your name</label>
+      <input name="name" placeholder="What should I call you?" required>
+
+      <label>1. I wanna sleep</label>
+      <textarea name="sleep" placeholder="same beh 😭" required></textarea>
+
+      <label>2. School suggestions for med/stem pls (considering San Ag & CPU already)</label>
+      <input name="school" placeholder="schools" required>
+
+      <label>3. When birthday ko? 😈 (wrong answers = no invite)</label>
+      <input name="birthday" placeholder="My birthday" required>
+
+      <label>4. Feel nyo ano favorite subject ko 😇?</label>
+      <textarea name="favorite_subject" placeholder="indi math ha"></textarea>
+
+      <label>5. Ano first impression nyo sakon?</label>
+      <select name="first_impression">
+        <option>gahod</option>
+        <option>hipos</option>
+        <option>cute (BEST option)</option>
+        <option>buot 😋 (2nd BEST option)</option>
+        <option>funny</option>
+      </select>
+
+      <label>6. Recommend shows pls</label>
+      <textarea name="shows" placeholder="anything but with a love triangle 😭 preferably fantasy HAHAHAHA"></textarea>
+
+      <button type="submit">Finish survey 💙</button>
+    </form>
+
+    <p id="thanks"></p>
+    <p>at dahil diyan, librehon moko potcor 😈</p>
+  </div>
+
+  <script>
+    document.getElementById("survey").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("thanks").textContent =
+        "Thank you for answering! 💙☁️";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+
